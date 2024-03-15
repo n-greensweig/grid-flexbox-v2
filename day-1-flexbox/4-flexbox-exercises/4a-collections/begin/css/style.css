@@ -58,7 +58,7 @@ figcaption {
     width: 100%;
     bottom: 0%;
     opacity: .7;
-    padding: 1rem;
+    padding: 8px 8px 10px 16px;
 }
 
 figcaption * {
@@ -78,11 +78,30 @@ ul {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
-    gap: 6%;
+    gap: 4%;
 }
 
 li {
-    flex-basis: 33%;
+    flex-basis: calc(33.333% - 4%);
+}
+
+.figure__border--dark-orange {
+    border: 5px solid var(--color7);
+}
+.figure__border--dark-blue {
+    border: 5px solid var(--color2);
+}
+.figure__border--light-orange {
+    border: 5px solid var(--color6);
+}
+.figure__border--red {
+    border: 5px solid var(--color8);
+}
+.figure__border--green {
+    border: 5px solid var(--color4);
+}
+.figure__border--light-blue {
+    border: 5px solid var(--color3);
 }
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
