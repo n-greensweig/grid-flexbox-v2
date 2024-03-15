@@ -50,7 +50,23 @@ section ul {
     margin: 0;
 }
 
-
+.header {
+    background-color: var(--color5);
+}
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
