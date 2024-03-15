@@ -44,74 +44,90 @@ section h2 {
     font-size: 2.5rem;
 }
 
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 figure {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
     position: relative;
-    display: flex;
-    flex-flow: column nowrap;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+ figure img {
+    margin-bottom: -4px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -150px;
+ }
+
+ figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     margin: 0;
     padding: 0;
-}
+ }
 
-figcaption {
-    position: absolute;
-    background-color: #DBE5DE;
-    width: 100%;
-    bottom: 0%;
-    opacity: .7;
-    padding: 8px 8px 10px 16px;
-}
-
-figcaption * {
-    margin: .5rem;
-}
-
-img {
-    width: 100%;
-}
-
-a {
+ figcaption a {
+    display: block;
+    padding: 1rem;
     text-decoration: none;
-    color: #001219;
+    color: var(--color1);
+ }
+
+ .figure__border--dark-orange,
+ .figure__border--dark-orange a:hover {
+    border-color: var(--color7);
+ }
+ .figure__border--dark-blue,
+ .figure__border--dark-blue a:hover {
+    border-color: var(--color2);
+ }
+ .figure__border--light-orange,
+ .figure__border--light-orange a:hover {
+    border-color: var(--color6);
+ }
+ .figure__border--red,
+ .figure__border--red a:hover {
+    border-color: var(--color8);
+ }
+ .figure__border--green,
+ .figure__border--green a:hover {
+    border-color: var(--color4);
+ }
+ .figure__border--light-blue,
+ .figure__border--light-blue a:hover {
+    border-color: var(--color3);
+ }
+@media (min-width: 550px) {
+    section ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    section li {
+        flex-basis: 49.5%;
+    }
+    figure img {
+        object-position: 0;
+    }
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 4%;
+@media (min-width: 800px) {
+    section h2 {
+        margin-left: 100px;
+    }
+    section li {
+        flex-basis: 32.5%;
+    }
 }
-
-li {
-    flex-basis: calc(33.333% - 4%);
-}
-
-.figure__border--dark-orange {
-    border: 5px solid var(--color7);
-}
-.figure__border--dark-blue {
-    border: 5px solid var(--color2);
-}
-.figure__border--light-orange {
-    border: 5px solid var(--color6);
-}
-.figure__border--red {
-    border: 5px solid var(--color8);
-}
-.figure__border--green {
-    border: 5px solid var(--color4);
-}
-.figure__border--light-blue {
-    border: 5px solid var(--color3);
-}
-
-/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
-
-
-/* At this breakpoint, transition to 2 figures per line */
-
-@media (min-width: 550px) {}
-
-
-/* At this breakpoint, transition to 3 figures per line */
-
-@media (min-width: 800px) {}
